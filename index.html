@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Plastron</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+  <link rel="stylesheet" href="shared/headers.css">
+  <link rel="stylesheet" href="shared/input_areas.css">
+  <link rel="stylesheet" href="shared/buttons.css">
+  <link rel="stylesheet" href="style/animations.css">
+  <link rel="stylesheet" href="style/style.css">
+  <!-- JS -->
+  <script type="text/javascript" src="js/async_storage.js"></script>
+  <script type="text/javascript" src="js/animations.js"></script>
+  <script type="text/javascript" src="js/utils.js"></script>
+</head>
+<body role="application">
+
+  <section role="region" class="skin-dark" id="setup">
+    <header>
+      <h1>Welcome to Plastron</h1>
+    </header>
+    <header>
+      <h2>Think of a password!</h2>
+    </header>
+    <div id="body">
+		<div id="content">
+			<p>
+				Welcome to Plastron, your personal guard for your precious pictures.
+      </p>
+      <p>
+        Please bear in mind that Plastron is still in its early ages, not feature complete neither stable yet.
+        So don't risk your important media that you don't have copies of yet.
+      </p>
+      <p>
+        Use it and help us make it better.
+      </p>
+      <p>
+        Click Next! to set up a password and start using Plastron.
+      </p>
+			<button class="recommend" id="NextToPass" onclick="Animation.nextLayer('setup','password')">Next!</button>
+		</div>
+    </div>
+  </section>
+  <section role="region" class="skin-dark" id="password">
+    <header>
+      <h1>Welcome to Plastron</h1>
+    </header>
+    <header>
+      <h2>Enter a pasword to get started!</h2>
+    </header>
+    <div id="body">
+      <div id="content">
+        <p>Enter a password of your choice:
+        </p>
+        <input placeholder="Password" required type="password">
+        <p>Confirm it:</p>
+        <input placeholder="Password" required type="password">
+        <br/>
+        <button class="recommend" id="NextToConfigDone">Next!</button>
+      </div>
+    </div>
+  </section>
+  
+  <section role="region" class="skin-dark" id="config_done">
+    <header>
+      <h1>Plastron</h1>
+    </header>
+    <header>
+      <h2>Yey!! All set!</h2>
+    </header>
+    <div id="body">
+      <div id="content">
+        <p>Congratulations! You've just finished configuring Plastron.</p>
+        <p>Now you can add, edit and remove pictures to your little secret corner.</p>
+        <button class="recommend" id="NextToUse">Next!</button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Within App usgae -->
+
+  <section role="region" class="skin-dark" id="password_enter">
+    <header>
+      <h1>Welcome to Plastron</h1>
+    </header>
+    <header>
+      <h2>Enter your password!</h2>
+    </header>
+    <div id="body">
+      <div id="content">
+        <p>Enter your password to access your content
+        </p>
+        <input placeholder="Password" required type="password" id="valueCheckPassForContent">
+        <p id="errorWrongPasscode" class="error hidden">Wrong passcode. 3 more shots before locking the app in.</p>
+        <button class="recommend" id="CheckPassForContent">Next!</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

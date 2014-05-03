@@ -1,0 +1,85 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  background-color: #fff;
+
+}
+body {
+  background: none;
+  overflow-x:hidden;
+}
+section[role="region"]{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+
+}
+section[role="region"] header{
+  z-index: 1;
+}
+section[role="region"] header:first-child{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+section[role="region"] header:nth-child(2){
+  position: fixed;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+}
+
+
+section[role="region"] div[id="body"]{
+  position:absolute;
+  top: 9rem;
+  left: 0;
+  width: 100%;
+}
+
+section[role="region"] div[id="body"] div[id="content"]{
+  width: calc(100% - 4rem);
+  display: block;
+  margin: 2rem auto;
+}
+section[role="region"] div[id="body"] div[id="content"] input{
+  color: #242D33;
+}
+
+section[role="region"] div[id="body"] div[id="content"] p{
+  font-size: 1.5rem;
+  color: #242D33;
+  font-weight: light;
+}
+
+
+/* z-index s */
+
+section[id="setup"]{
+	z-index:1;
+}
+section[id="password"]{
+	z-index:2;
+}
+section[id="config_done"]{
+	z-index:3;
+}
+
+
+/* General classes */
+
+.hidden{
+  display: none;
+}
+.shown{
+  display: block;
+}
+
+
+p[class~="error"]{
+  color: red!important;
+}

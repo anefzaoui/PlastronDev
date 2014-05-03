@@ -1,0 +1,26 @@
+{
+  "name": "Plastron",
+  "description": "Protect your precious pictures.",
+  "type": "privileged",
+  "version":"0.1.0",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Ahmed Nefzaoui",
+    "url": "https://github.com/anefzaoui/plastron"
+  },
+  "permissions": {
+    "storage":{},
+    "alarms":{},
+    "settings":{ "access": "readwrite" },
+    "attention":{},
+    "audio-channel-alarm":{}
+  },
+  "default_locale": "en-US",
+  "icons": {
+    "60": "/style/icons/icon_60.png",
+    "90": "/style/icons/icon_90.png",
+    "120": "/style/icons/icon_120.png",
+    "135": "/style/icons/icon_135.png"
+  },
+  "orientation": "default"
+}

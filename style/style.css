@@ -83,3 +83,12 @@ section[id="config_done"]{
 p[class~="error"]{
   color: red!important;
 }
+
+
+#image {
+	padding: 5px;
+  border: solid 1px #CCC;
+  width: 9rem;
+  height: 9rem;
+  margin: .5rem;
+}

@@ -10,7 +10,11 @@ var utils = {
       Animation.nextLayer('setup','password');
     });
     $("NextToConfigDone").addEventListener('click', function(evt) {
+      var inputPass = $("enterPasswordToSave").value, inputPassConfirm = $("enterPasswordToSaveAndConfirm").value;
+      if ((inputPass != "") && (inputPass == inputPassConfirm)){
+      utils.setPassword(inputPass);
       Animation.nextLayer('password','config_done');
+      }
     });
     
     // Check if password is true
@@ -20,6 +24,7 @@ var utils = {
         if(value == inputValue){
           $("errorWrongPasscode").classList.add("hidden");
           console.log("Passed");
+          Animation.nextLayer('password_enter','browse_elements');
         }
         else{
           $("errorWrongPasscode").classList.remove("hidden");

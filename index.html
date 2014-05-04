@@ -15,33 +15,32 @@
   <script type="text/javascript" src="js/utils.js"></script>
 </head>
 <body role="application">
-
-  <section role="region" class="skin-dark" id="setup">
-    <header>
-      <h1>Welcome to Plastron</h1>
-    </header>
-    <header>
-      <h2>Think of a password!</h2>
-    </header>
-    <div id="body">
-		<div id="content">
-			<p>
-				Welcome to Plastron, your personal guard for your precious pictures.
+<section role="region" class="skin-dark" id="setup">
+  <header>
+    <h1>Welcome to Plastron</h1>
+  </header>
+  <header>
+    <h2>Think of a password!</h2>
+  </header>
+  <div id="body">
+    <div id="content">
+      <p>
+      Welcome to Plastron, your personal guard for your precious pictures.
       </p>
       <p>
-        Please bear in mind that Plastron is still in its early ages, not feature complete neither stable yet.
-        So don't risk your important media that you don't have copies of yet.
+      Please bear in mind that Plastron is still in its early ages, not feature complete neither stable yet.
+      So don't risk your important media that you don't have copies of yet.
       </p>
       <p>
-        Use it and help us make it better.
+      Use it and help us make it better.
       </p>
       <p>
-        Click Next! to set up a password and start using Plastron.
+      Click Next! to set up a password and start using Plastron.
       </p>
-			<button class="recommend" id="NextToPass" onclick="Animation.nextLayer('setup','password')">Next!</button>
-		</div>
+      <button class="recommend" id="NextToPass" onclick="Animation.nextLayer('setup','password')">Next!</button>
     </div>
-  </section>
+  </div>
+</section>
   <section role="region" class="skin-dark" id="password">
     <header>
       <h1>Welcome to Plastron</h1>
@@ -53,9 +52,9 @@
       <div id="content">
         <p>Enter a password of your choice:
         </p>
-        <input placeholder="Password" required type="password">
+        <input placeholder="Password" required type="password" id="enterPasswordToSave">
         <p>Confirm it:</p>
-        <input placeholder="Password" required type="password">
+        <input placeholder="Password" required type="password" id="enterPasswordToSaveAndConfirm">
         <br/>
         <button class="recommend" id="NextToConfigDone">Next!</button>
       </div>
@@ -92,8 +91,28 @@
         <p>Enter your password to access your content
         </p>
         <input placeholder="Password" required type="password" id="valueCheckPassForContent">
-        <p id="errorWrongPasscode" class="error hidden">Wrong passcode. 3 more shots before locking the app in.</p>
+        <p id="errorWrongPasscode" class="error hidden">Wrong passcode. 3 more shots before locking you out.</p>
         <button class="recommend" id="CheckPassForContent">Next!</button>
+        <br/>
+      </div>
+    </div>
+  </section>
+  
+  <section role="region" class="skin-dark" id="browse_elements">
+    <header>
+      <h1>Welcome to Plastron</h1>
+    </header>
+    <header>
+      <h2>Hey there!</h2>
+    </header>
+    <div id="body">
+      <div id="content">
+        <p>
+          <img src="http://lorempixel.com/80/80/" id="image"/>
+          <img src="http://lorempixel.com/80/80/" id="image"/>
+          <img src="http://lorempixel.com/80/80/" id="image"/>
+          <img src="http://lorempixel.com/80/80/" id="image"/>
+        </p>
       </div>
     </div>
   </section>

@@ -1,3 +1,5 @@
+'use strict';
+
 function $(id){
   return document.getElementById(id);
 }
@@ -9,6 +11,7 @@ var utils = {
     $("NextToPass").addEventListener('click', function(evt) {
       Animation.nextLayer('setup','password');
     });
+
     $("NextToConfigDone").addEventListener('click', function(evt) {
       var inputPass = $("enterPasswordToSave").value, inputPassConfirm = $("enterPasswordToSaveAndConfirm").value;
       if ((inputPass != "") && (inputPass == inputPassConfirm)){
@@ -16,7 +19,11 @@ var utils = {
       Animation.nextLayer('password','config_done');
       }
     });
-    
+
+    $("NextToUse").addEventListener('click', function(evt) {
+      Animation.nextLayer('config_done','browse_elements');
+    });
+
     // Check if password is true
     $("CheckPassForContent").addEventListener('click', function(evt) {
       asyncStorage.getItem('__CONFIG_PASSWORD__', function(value) {
@@ -32,6 +39,36 @@ var utils = {
       });
     });
     
+    
+    $("add_element_to_browser").addEventListener('click', function(evt) {
+      var activity = new MozActivity({
+        // Ask for the "pick" activity
+        name: "pick",
+
+        // Provide the data required by the filters of the activity
+        data: {
+          type: "image/*",
+        }
+      });
+
+      activity.onsuccess = function() {
+        var picture = this.result;
+        var url = URL.createObjectURL(picture.blob);
+        //$("images").innerHTML+="<img id='image' src='"+url+"'/>";
+        var img = document.createElement("img");
+        img.id = "image";
+        img.src = url;
+        $("images").appendChild(img);
+        userData.addDefault(url);
+      };
+
+      activity.onerror = function() {
+        console.log(this.error);
+      };
+    });
+    
+    
+
     
   },
 

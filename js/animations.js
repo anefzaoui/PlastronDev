@@ -1,3 +1,5 @@
+'use strict';
+
 var Animation = {
   
   RTL : false,

@@ -12,6 +12,7 @@
   <!-- JS -->
   <script type="text/javascript" src="js/async_storage.js"></script>
   <script type="text/javascript" src="js/animations.js"></script>
+  <script type="text/javascript" src="js/userData.js"></script>
   <script type="text/javascript" src="js/utils.js"></script>
 </head>
 <body role="application">
@@ -100,18 +101,18 @@
   
   <section role="region" class="skin-dark" id="browse_elements">
     <header>
-      <h1>Welcome to Plastron</h1>
+      <menu type="toolbar">
+        <button><span class="icon icon-edit">edit</span></button>
+        <button id="add_element_to_browser"><span class="icon icon-add">add</span></button>
+      </menu>
+      <h1>Plastron</h1>
     </header>
     <header>
-      <h2>Hey there!</h2>
+      <h2>Welcome home :)</h2>
     </header>
     <div id="body">
       <div id="content">
-        <p>
-          <img src="http://lorempixel.com/80/80/" id="image"/>
-          <img src="http://lorempixel.com/80/80/" id="image"/>
-          <img src="http://lorempixel.com/80/80/" id="image"/>
-          <img src="http://lorempixel.com/80/80/" id="image"/>
+        <p id="images">
         </p>
       </div>
     </div>

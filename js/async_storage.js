@@ -43,7 +43,7 @@
 this.asyncStorage = (function() {
   'use strict';
 
-  var DBNAME = 'asyncStorage';
+  var DBNAME = 'PlstronAsyncStorageDataBase';
   var DBVERSION = 1;
   var STORENAME = 'keyvaluepairs';
   var db = null;
